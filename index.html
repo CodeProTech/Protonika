@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Protonika</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Protonika – Interactive Atom Simulator</h1>
+    <p class="intro">Explore the fascinating world of atoms! This simulation demonstrates the basic principles of atomic physics and nuclear forces.</p>
+</header>
+
+<div class="info-box">
+    <h2>Physical Principles</h2>
+    <ul>
+        <li><strong>Coulomb Force:</strong> Electric attraction/repulsion between charged particles</li>
+        <li><strong>Strong Nuclear Force:</strong> Binds protons and neutrons in the nucleus</li>
+        <li><strong>Electron Cloud:</strong> Electrons move in shells around the nucleus</li>
+        <li><strong>Nuclear Stability:</strong> Depends on the ratio of protons to neutrons</li>
+    </ul>
+</div>
+
+<div class="controls">
+    <div class="control-group">
+        <h3>Custom Particles</h3>
+        <div class="input-group">
+            <label>Protons: <input type="number" id="protonCount" min="1" max="200" value="1"></label>
+            <label>Neutrons: <input type="number" id="neutronCount" min="0" max="300" value="0"></label>
+            <label>Electrons: <input type="number" id="electronCount" min="0" max="200" value="1"></label>
+        </div>
+        <button id="customSpawnBtn" class="btn">Add Custom</button>
+    </div>
+
+    <div class="control-group">
+        <h3>Periodic Table</h3>
+        <div class="atom-selector">
+            <label for="atomSearch">Search element:</label>
+            <input type="text" id="atomSearch" placeholder="Name or symbol...">
+            <select id="atomSelect" size="6"></select>
+            <div class="amount-control">
+                <label>Amount: <input type="number" id="atomAmount" min="1" max="10" value="1"></label>
+                <button id="atomSpawnBtn" class="btn primary">Add Atom(s)</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <button id="resetBtn" class="btn danger">Reset Simulation</button>
+    </div>
+</div>
+
+<div class="canvas-container">
+    <canvas id="atomCanvas" width="1600" height="1100"></canvas>
+    <div class="legend">
+        <h3>Legend</h3>
+        <div class="legend-item"><span class="dot proton"></span>Proton (+)</div>
+        <div class="legend-item"><span class="dot neutron"></span>Neutron (0)</div>
+        <div class="legend-item"><span class="dot electron"></span>Electron (-)</div>
+        <div class="legend-item"><span class="nucleus stable"></span>Stable Nucleus</div>
+        <div class="legend-item"><span class="nucleus unstable"></span>Unstable Nucleus</div>
+    </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

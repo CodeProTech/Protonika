@@ -1,0 +1,232 @@
+:root {
+    --bg-dark: #181a21;
+    --bg-darker: #13151b;
+    --bg-lighter: #1e2029;
+    --bg-canvas: #222444;
+    --text-light: #e2eaf2;
+    --text-secondary: #b6c6e8;
+    --border-color: #3a4961;
+    --shadow-color: rgba(27, 34, 51, 0.8);
+    --highlight-blue: #4a90e2;
+    --proton-color: #ff5555;
+    --neutron-color: #bbbbbb;
+    --electron-color: #43aaff;
+    --stable-color: #ffff00;
+    --unstable-color: #ff0033;
+}
+
+body {
+    background: var(--bg-dark);
+    color: var(--text-light);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: var(--highlight-blue);
+    font-size: 2.5em;
+    margin: 20px 0 10px;
+    text-shadow: 0 2px 8px rgba(26, 43, 76, 0.3);
+}
+
+.intro {
+    color: var(--text-secondary);
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1em;
+}
+
+.info-box {
+    background: var(--bg-lighter);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 16px var(--shadow-color);
+}
+
+.info-box h2 {
+    color: var(--highlight-blue);
+    margin-top: 0;
+}
+
+.info-box ul {
+    padding-left: 20px;
+}
+
+.info-box li {
+    margin: 10px 0;
+}
+
+.controls {
+    max-width: 1200px;
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.control-group {
+    background: var(--bg-lighter);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px var(--shadow-color);
+    min-width: 280px;
+}
+
+.control-group h3 {
+    color: var(--highlight-blue);
+    margin-top: 0;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+input[type="number"],
+input[type="text"] {
+    background: var(--bg-dark);
+    border: 1px solid var(--border-color);
+    color: var(--text-light);
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin: 0 5px;
+    width: 80px;
+}
+
+input[type="text"] {
+    width: 100%;
+}
+
+select {
+    background: var(--bg-dark);
+    border: 1px solid var(--border-color);
+    color: var(--text-light);
+    padding: 8px;
+    border-radius: 6px;
+    width: 100%;
+    margin: 10px 0;
+    min-height: 150px;
+}
+
+.btn {
+    background: var(--highlight-blue);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 1em;
+    width: 100%;
+}
+
+.btn:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+}
+
+.btn.primary {
+    background: var(--highlight-blue);
+}
+
+.btn.danger {
+    background: #e74c3c;
+}
+
+.canvas-container {
+    position: relative;
+    max-width: 1600px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+#atomCanvas {
+    background: var(--bg-canvas);
+    border: 2px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px var(--shadow-color);
+    width: 100%;
+    height: auto;
+}
+
+.legend {
+    background: var(--bg-lighter);
+    padding: 15px 25px;
+    border-radius: 12px;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    box-shadow: 0 4px 16px var(--shadow-color);
+}
+
+.legend h3 {
+    margin-top: 0;
+    color: var(--highlight-blue);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.dot.proton { background: var(--proton-color); }
+.dot.neutron { background: var(--neutron-color); }
+.dot.electron { background: var(--electron-color); }
+
+.nucleus {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid;
+}
+
+.nucleus.stable { border-color: var(--stable-color); }
+.nucleus.unstable { border-color: var(--unstable-color); }
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .controls {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .control-group {
+        width: auto;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .legend {
+        position: static;
+        margin: 20px auto;
+        max-width: 300px;
+    }
+}
