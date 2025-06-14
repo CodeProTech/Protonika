@@ -21,7 +21,24 @@ Protonika is a state-of-the-art 2D particle physics simulator that brings atomic
 
 ### [🌐 Live Demo](https://protonika.onrender.com)
 
+## 📸 Screenshots
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <strong>Screenshot 1</strong><br>
+        <img src="https://github.com/user-attachments/assets/a5c64e08-d168-48d9-acc1-d8145961d55b" alt="Screenshot 1" width="400">
+      </td>
+      <td align="center">
+        <strong>Screenshot 2</strong><br>
+        <img src="https://github.com/user-attachments/assets/d0891057-9f82-4123-b57b-5d159f505191" alt="Screenshot 2" width="400">
+      </td>
+    </tr>
+  </table>
+</div>
+
 ## 🎯 Core Features
+
 
 ### Particle Physics Simulation
 - **Protons**: Positively charged nuclear particles
