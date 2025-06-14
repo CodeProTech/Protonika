@@ -19,8 +19,6 @@
 
 Protonika is a state-of-the-art 2D particle physics simulator that brings atomic interactions to life in your browser. Experience the fascinating world of quantum mechanics through an intuitive and interactive interface.
 
-### [🌐 Live Demo](https://protonika.onrender.com)
-
 ## 📸 Screenshots
 <div align="center">
   <table>
